@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faTrash, faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-maintenance',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./maintenance.component.css']
 })
 export class MaintenanceComponent {
-
+  fatrash=faTrash;
+  fasave=faSave;
 }

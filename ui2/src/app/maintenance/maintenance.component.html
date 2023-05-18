@@ -1,10 +1,120 @@
 <br>
 <div class="container-fluid">
-  <tabset #staticTabs>
-    <tab heading="Teams">
-      
-    </tab>
-    <tab heading="Employee">Static content 1</tab>
-    <tab heading="Tasks">Static content 2</tab>
-  </tabset>
+  <div class="row">
+    <!-- Teams -->
+    <div class="col-sm-4">
+      <div>
+        <tabset>
+          <tab heading="Select Team" id="tab1">
+            <table class="table table-striped table-success">
+              <thead>
+                <tr>
+                  <th scope="col">Team Name</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input class="form-control" type="text" name="" id=""></th>
+                  <th scope="row">
+                    <a class="btn btn-primary">
+                      <fa-icon [icon]="fasave"></fa-icon>
+                    </a>
+                  </th>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <th scope="row"> <a class="btn btn-danger">
+                      <fa-icon [icon]="fatrash"></fa-icon>
+                    </a></th>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <th scope="row"> <a class="btn btn-danger">
+                      <fa-icon [icon]="fatrash"></fa-icon>
+                    </a></th>
+                </tr>
+              </tbody>
+            </table>
+          </tab>
+        </tabset>
+      </div>
+
+
+    </div>
+    <div class="col-sm-8">
+      <div>
+        <tabset>
+          <!-- Employees -->
+          <tab heading="Employees">
+            <div class="row">
+              <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col" class="short-column">Employee ID</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row"><input class="form-control" type="text" name="" id=""></td>
+                    <td scope="row"><input class="form-control" type="text" name="" id=""></td>
+                    <td scope="row">
+                      <a class="btn btn-primary">
+                        <fa-icon [icon]="fasave"></fa-icon>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"><input class="form-control" type="text" name="" id=""></td>
+                    <td scope="row"><input class="form-control" type="text" name="" id=""></td>
+                    <td scope="row">
+                      <a class="btn btn-danger">
+                        <fa-icon [icon]="fatrash"></fa-icon>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </tab>
+          <!-- Tasks -->
+          <tab heading="Tasks" id="tab1">
+            <div class="row">
+              <table class="table  table-striped table-dark ">
+                <thead>
+                  <tr>
+                    <th scope="col">Task Description</th>
+                    <th scope="col">Task Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">DQ Checking</th>
+                    <th scope="row">Covered</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">DQ Checking</th>
+                    <th scope="row">Covered</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">DQ Checking</th>
+                    <th scope="row">Covered</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">DQ Checking</th>
+                    <th scope="row">Covered</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </tab>
+        </tabset>
+      </div>
+
+
+
+    </div>
+  </div>
 </div>

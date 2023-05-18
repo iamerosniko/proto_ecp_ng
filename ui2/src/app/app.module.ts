@@ -7,6 +7,7 @@ import { NavComponent } from './nav/nav.component';
 import { ReportsComponent } from './reports/reports.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TabsModule.forRoot(),
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
