@@ -1,0 +1,31 @@
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <br>
+      <form [formGroup]="form" class="container-fluid" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="team">Select Team</label>
+          <select id="team" class="form-control" formControlName="team">
+            <option value="" disabled selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="year">Select Year</label>
+          <select id="year" class="form-control" formControlName="year">
+            <option value="" disabled selected>Choose...</option>
+            <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+      </form>
+    </ul>
+  </div>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- test -->
+      </div>
+    </div>
+  </div>
+</div>
