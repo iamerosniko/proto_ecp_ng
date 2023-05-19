@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faTrash, faSave } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faSave, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-maintenance',
@@ -9,4 +9,5 @@ import { faTrash, faSave } from '@fortawesome/free-solid-svg-icons';
 export class MaintenanceComponent {
   fatrash=faTrash;
   fasave=faSave;
+  faadd=faPlusCircle;
 }

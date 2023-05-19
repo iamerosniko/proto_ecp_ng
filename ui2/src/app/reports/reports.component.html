@@ -5,27 +5,38 @@
       <form [formGroup]="form" class="container-fluid" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="team">Select Team</label>
-          <select id="team" class="form-control" formControlName="team">
+          <select id="team" class="form-control form-control-sm" formControlName="team">
             <option value="" disabled selected>Choose...</option>
             <option>...</option>
           </select>
         </div>
         <div class="form-group">
           <label for="year">Select Year</label>
-          <select id="year" class="form-control" formControlName="year">
+          <select id="year" class="form-control form-control-sm" formControlName="year">
             <option value="" disabled selected>Choose...</option>
             <option *ngFor="let year of years" [value]="year">{{ year }}</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+        <button type="submit" class="btn btn-primary btn-sm" [disabled]="!form.valid">Submit</button>
       </form>
     </ul>
   </div>
   <div id="page-content-wrapper">
     <div class="container-fluid">
-      <div class="row">
-        <!-- test -->
-      </div>
+      <label class="btn btn-primary btn-sm" btnCheckbox tabindex="0" role="button">
+        <fa-icon [icon]="excelIcon"></fa-icon> Export to excel
+      </label>
+      <tabset>
+        <tab *ngFor="let tabz of tabs" [heading]="tabz.title">
+          <app-months-template [test]="tabz.title"></app-months-template>
+        </tab>
+        <tab *ngIf="isMonthsReady" heading="VOLUME">
+          <app-apt-vol-template [months]="months"></app-apt-vol-template>
+        </tab>
+        <tab *ngIf="isMonthsReady" heading="APT">
+          <app-apt-vol-template [months]="months"></app-apt-vol-template>
+        </tab>
+      </tabset>
     </div>
   </div>
 </div>
